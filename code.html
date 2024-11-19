@@ -62,7 +62,7 @@
    
    <div class="pronunciations">
        <div class="pronunciation">
-           <span class="pronunciation-symbol">英</span> {{英式发音}}
+           <span class="pronunciation-symbol">英</span> {{英式音标}}
            <span class="audio-icon" onclick="document.getElementById('audioUK').play();">🔊</span>
            <audio id="audioUK">
                <source src="https://dict.youdao.com/dictvoice?type=0&audio={{单词}}" type="audio/mpeg">
@@ -71,7 +71,7 @@
        </div>
    
        <div class="pronunciation">
-           <span class="pronunciation-symbol">美</span> {{美式发音}}
+           <span class="pronunciation-symbol">美</span> {{美式音标}}
            <span class="audio-icon" onclick="document.getElementById('audioUS').play();">🔊</span>
            <audio id="audioUS">
                <source src="https://dict.youdao.com/dictvoice?type=1&audio={{单词}}" type="audio/mpeg">
@@ -81,7 +81,8 @@
    </div>
    
    <p>🔴释义：</p>
-   <p style="text-indent: 4em;">{{释义}}</p>
+   <div style="text-indent: 2em;"><p>{{释义}}</p></div>
    
    <p>🔴列句：</p>
-   <p style="text-indent: 4em;">{{列句}}</p>
+   <div style="text-indent: 2em;"><p>{{列句}}</p></div>
+   
