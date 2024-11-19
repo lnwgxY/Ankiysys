@@ -1,88 +1,87 @@
-<!-- css样式 -->
-<style>
-    .pronunciation {
-       display: inline-flex;
-       align-items: center;
-       background-color: #f0f0f0;
-       color: #000000;
-       border-radius: 20px;
-       padding: 5px 10px;
-       font-family: Arial, sans-serif;
-       font-size: 16px;
-       margin: 0 10px;
-   }
-   
-   .pronunciation-symbol {
-       margin-right: 5px;
-       font-weight: bold;
-   }
-   
-   .audio-icon {
-       margin-left: 10px;
-       cursor: pointer;
-       color: #e74c3c;
-   }
-   
-   h1 {
-       text-align: center;
-   }
-   
-   .pronunciations {
-       display: flex;
-       justify-content: center;
-       margin: 20px 0;
-   }
-   </style>
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-   <!-- 正面 -->
-   <h1>单词</h1>
-   
-   <div class="pronunciations">
-       <div class="pronunciation">
-           <span class="pronunciation-symbol">英</span> {{英式发音}}
-           <span class="audio-icon" onclick="document.getElementById('audioUK').play();">🔊</span>
-           <audio id="audioUK">
-               <source src="https://dict.youdao.com/dictvoice?type=0&audio={{单词}}" type="audio/mpeg">
-               您的浏览器不支持音频元素。
-           </audio>
-       </div>
-   
-       <div class="pronunciation">
-           <span class="pronunciation-symbol">美</span> {{美式发音}}
-           <span class="audio-icon" onclick="document.getElementById('audioUS').play();">🔊</span>
-           <audio id="audioUS">
-               <source src="https://dict.youdao.com/dictvoice?type=1&audio={{单词}}" type="audio/mpeg">
-               您的浏览器不支持音频元素。
-           </audio>
-       </div>
-   </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiki卡牌模板</title>
+    <style>
+        .pronunciation {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            color: #000000;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0 10px;
+        }
 
-   <!-- 背面 -->
-   <h1>单词</h1>
-   
-   <div class="pronunciations">
-       <div class="pronunciation">
-           <span class="pronunciation-symbol">英</span> {{英式音标}}
-           <span class="audio-icon" onclick="document.getElementById('audioUK').play();">🔊</span>
-           <audio id="audioUK">
-               <source src="https://dict.youdao.com/dictvoice?type=0&audio={{单词}}" type="audio/mpeg">
-               您的浏览器不支持音频元素。
-           </audio>
-       </div>
-   
-       <div class="pronunciation">
-           <span class="pronunciation-symbol">美</span> {{美式音标}}
-           <span class="audio-icon" onclick="document.getElementById('audioUS').play();">🔊</span>
-           <audio id="audioUS">
-               <source src="https://dict.youdao.com/dictvoice?type=1&audio={{单词}}" type="audio/mpeg">
-               您的浏览器不支持音频元素。
-           </audio>
-       </div>
-   </div>
-   
-   <p>🔴释义：</p>
-   <div style="text-indent: 2em;"><p>{{释义}}</p></div>
-   
-   <p>🔴列句：</p>
-   <div style="text-indent: 2em;"><p>{{列句}}</p></div>
-   
+        .pronunciation-symbol {
+            margin-right: 5px;
+            font-weight: bold;
+        }
+
+        .audio-icon {
+            margin-left: 10px;
+            cursor: pointer;
+            color: #e74c3c;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .pronunciations {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .shsj {
+           
+            -ms-transform:translateX(3%);
+	        -webkit-transform:translateX(3%);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>单词</h1>
+
+    <div class="pronunciations">
+        <div class="pronunciation">
+            <span class="pronunciation-symbol">英</span> {{英式音标}}
+            <span class="audio-icon" onclick="document.getElementById('audioUK').play();">🔊</span>
+            <audio id="audioUK">
+                <source src="https://dict.youdao.com/dictvoice?type=0&audio={{单词}}" type="audio/mpeg">
+                您的浏览器不支持音频元素。
+            </audio>
+        </div>
+
+        <div class="pronunciation">
+            <span class="pronunciation-symbol">美</span> {{美式音标}}
+            <span class="audio-icon" onclick="document.getElementById('audioUS').play();">🔊</span>
+            <audio id="audioUS">
+                <source src="https://dict.youdao.com/dictvoice?type=1&audio={{单词}}" type="audio/mpeg">
+                您的浏览器不支持音频元素。
+            </audio>
+        </div>
+    </div>
+<div>
+    <p>🔴释义：</p>
+    <div class="shsj">{{释义}}</div> 
+
+</div>
+
+<div>
+    <p>🔴列句：</p>
+    <div class="shsj">{{列句}}</div> 
+    
+</div>
+
+</body>
+
+</html>
